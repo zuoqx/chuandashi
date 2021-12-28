@@ -72,6 +72,11 @@ def run():
     if NOTION_SEC is None:
         print("NOTION_SEC secrets is not set!")
         return
+
+    print(NOTION_SEC)
+    print(NOTION_DB_RSS)
+    print(NOTION_DB_KEYWORDS)
+    print(NOTION_DB_READER)
     api = NotionAPI(NOTION_SEC, NOTION_DB_RSS, NOTION_DB_KEYWORDS, NOTION_DB_READER)
 
     keywords = api.query_keywords()
