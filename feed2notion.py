@@ -73,10 +73,11 @@ def run():
         print("NOTION_SEC secrets is not set!")
         return
 
-    print(NOTION_SEC)
-    print(NOTION_DB_RSS)
-    print(NOTION_DB_KEYWORDS)
-    print(NOTION_DB_READER)
+    print("NOTION_SEC = %s" %(NOTION_SEC))
+    print("NOTION_DB_RSS = %s" %(NOTION_DB_RSS))
+    print("NOTION_DB_KEYWORDS = %s" %(NOTION_DB_KEYWORDS))
+    print("NOTION_DB_READER = %s" %(NOTION_DB_READER))
+    
     api = NotionAPI(NOTION_SEC, NOTION_DB_RSS, NOTION_DB_KEYWORDS, NOTION_DB_READER)
 
     keywords = api.query_keywords()
